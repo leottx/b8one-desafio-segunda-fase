@@ -1,0 +1,62 @@
+/* VARIAVEIS */
+:root {
+  --white: #ffffff;
+  --blue-100: #425dc7;
+  --blue-200: #142159;
+  --gray-100: #555555;
+  --gray-200: #333333;
+  --red: #eb0045;
+}
+
+/* FONTES */
+@font-face {
+  src: url('~@fonts/Inter-Regular.ttf') format('truetype');
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  src: url('~@fonts/Inter-Medium.ttf') format('truetype');
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  src: url('~@fonts/Inter-SemiBold.ttf') format('truetype');
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+}
+
+/*  */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  background: var(--white);
+  color: var(--gray-200);
+}
+
+body,
+input,
+textarea,
+button {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+}
+
+button {
+  cursor: pointer;
+}
