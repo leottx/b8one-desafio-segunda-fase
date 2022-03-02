@@ -7,6 +7,63 @@
     <title>Document</title>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <form class="form-login">
+        <div class="form-login__wrapper">
+          <h1 class="form-login__title">Olá, tudo bem? 👋</h1>
+          <p class="form-login__text">
+            Vamos decolar para grandes dias de vendas.
+          </p>
+        </div>
+        <fieldset class="fieldset">
+          <label class="fieldset__label"
+            >Seu E-mail
+            <!-- fieldset__input-wrapper--warn -->
+            <div class="fieldset__input-wrapper">
+              <input
+                class="fieldset__input"
+                type="email"
+                placeholder="exemplo@email.com"
+              />
+            </div>
+            <span class="fieldset__warning"
+              >Este e-mail não existe, você tem outro?</span
+            >
+          </label>
+
+          <label class="fieldset__label"
+            >Sua Senha
+            <div
+              class="fieldset__input-wrapper fieldset__input-wrapper--password"
+            >
+              <input
+                class="fieldset__input"
+                type="password"
+                placeholder="Digite sua senha"
+              />
+              <button class="fieldset__show-password-btn" title="Ver senha">
+                <img
+                  class="fieldset__show-password-icon"
+                  src="~@images/eye-off.svg"
+                  alt="Botão ver senha"
+                />
+              </button>
+            </div>
+            <span class="fieldset__warning"
+              >Senha incorreta, você esqueceu?</span
+            >
+          </label>
+
+          <div class="fieldset__wrapper">
+            <label for="" class="fieldset__checkbox-label">
+              <input class="fieldset__checkbox" type="checkbox" name="" id="" />
+              Manter conectado
+            </label>
+            <a class="fieldset__password-reset" href="">Esqueci minha senha</a>
+          </div>
+        </fieldset>
+        <button class="fieldset__login-btn">Entrar</button>
+      </form>
+    </div>
   </body>
 </html>
