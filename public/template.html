@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
 
-  <body>
-    <div id="root">
-      <!-- <form class="form-login">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="root">
+    <!-- <form class="form-login">
         <div class="form-login__wrapper">
           <h1 class="form-login__title">Olá, tudo bem? 👋</h1>
           <p class="form-login__text">
@@ -64,71 +65,80 @@
         </fieldset>
         <button class="fieldset__login-btn">Entrar</button>
       </form> -->
-      <header class="header">
-        <div class="header__container">
-          <button class="burguer-btn">
-            <span class="burguer-btn__pipe"></span>
-            <span class="burguer-btn__pipe"></span>
-            <span class="burguer-btn__pipe"></span>
-          </button>
-          <div class="header__company-wrapper">
-            <figure class="header__company-avatar-wrapper">
-              <figcaption class="header__company-caption">ME</figcaption>
-            </figure>
-            <!-- <img src="#" alt="Logo da empresa" class="header__company-avatar" /> -->
-            <p class="header__company-name">Minha Empresa</p>
-          </div>
-          <ul class="header__actions-list">
-            <li class="header__actions-item">
-              <button class="header__action-btn header__action-btn--help">
-                <img
-                  class="header__icon header__icon--help"
-                  src="~@images/icon-help.svg"
-                  alt="Botão de ajuda"
-                />
-              </button>
-            </li>
-            <li class="header__actions-item">
-              <button class="header__action-btn header__action-btn--notif">
-                <img
-                  class="header__icon header__icon--notif"
-                  src="~@images/icon-bell.svg"
-                  alt="Botão de notificações"
-                />
-              </button>
-            </li>
-            <li class="header__actions-item">
-              <button class="header__user-btn">
-                <img
-                  class="header__user-avatar"
-                  src="~@images/pic-user.jpeg"
-                  alt="Botão do usuário"
-                />
-              </button>
-              <span class="header__username"> Gustavo Silva </span>
-            </li>
-          </ul>
+    <header class="header">
+      <div class="header__container">
+        <button class="burguer-btn">
+          <span class="burguer-btn__pipe"></span>
+          <span class="burguer-btn__pipe"></span>
+          <span class="burguer-btn__pipe"></span>
+        </button>
+        <div class="header__company-wrapper">
+          <figure class="header__company-avatar-wrapper">
+            <figcaption class="header__company-caption">ME</figcaption>
+          </figure>
+          <!-- <img src="#" alt="Logo da empresa" class="header__company-avatar" /> -->
+          <p class="header__company-name">Minha Empresa</p>
         </div>
-      </header>
-      <div class="container">
-        <main class="main-content">
-          <div class="banner">
-            <div class="banner__wrapper">
-              <button class="banner__info-btn">
-                <img
-                  src="~@images/icon-info.svg"
-                  alt="Botão de informações"
-                  class="banner__info-icon"
-                />
-              </button>
-              <p class="banner__message">
-                🔥 Lançamento 🔥 Nova Ferramenta de Carrinhos Abandonados 😍
-              </p>
-            </div>
-            <a href="#" class="banner__link">Conheça a nova ferramenta</a>
-          </div>
-        </main>
+        <ul class="header__actions-list">
+          <li class="header__actions-item">
+            <button class="header__action-btn header__action-btn--help">
+              <img class="header__icon header__icon--help" src="~@images/icon-help.svg" alt="Botão de ajuda" />
+            </button>
+          </li>
+          <li class="header__actions-item">
+            <button class="header__action-btn header__action-btn--notif">
+              <img class="header__icon header__icon--notif" src="~@images/icon-bell.svg" alt="Botão de notificações" />
+            </button>
+          </li>
+          <li class="header__actions-item">
+            <button class="header__user-btn">
+              <img class="header__user-avatar" src="~@images/pic-user.jpeg" alt="Botão do usuário" />
+            </button>
+            <span class="header__username"> Gustavo Silva </span>
+          </li>
+        </ul>
       </div>
+    </header>
+    <div class="container">
+      <main class="main-content">
+        <div class="banner">
+          <div class="banner__wrapper">
+            <button class="banner__info-btn">
+              <img src="~@images/icon-info.svg" alt="Botão de informações" class="banner__info-icon" />
+            </button>
+            <p class="banner__message">
+              🔥 Lançamento 🔥 Nova Ferramenta de Carrinhos Abandonados 😍
+            </p>
+          </div>
+          <a href="#" class="banner__link">Conheça a nova ferramenta</a>
+        </div>
+        <section class="balance">
+          <div class="summary">
+            <h2 class="summary__title">Resumo de dados</h2>
+            <div class="summary__wrapper">
+              <ul class="summary__opt-list">
+                <li class="summary__opt summary__opt--active">Últimos 7 dias</li>
+                <li class="summary__opt">Últimos 15 dias</li>
+                <li class="summary__opt">Último mês</li>
+                <li class="summary__opt">Último ano</li>
+                <li class="summary__opt">
+                  Personalizado
+                  <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.00016 1.5L4.00016 4.5L7.00016 1.5" stroke="#333333" stroke-width="1.5"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg />
+                </li>
+              </ul>
+            </div>
+            <p class="summary__message">
+              Exibindo dados do período
+              <span class="summary__message-highlight">1 de novembro à 8 de novembro de 2021</span>
+            </p>
+          </div>
+        </section>
+      </main>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>
