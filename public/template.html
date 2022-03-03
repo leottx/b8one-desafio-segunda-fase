@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
+
   <body>
     <div id="root">
-      <form class="form-login">
+      <!-- <form class="form-login">
         <div class="form-login__wrapper">
           <h1 class="form-login__title">Olá, tudo bem? 👋</h1>
           <p class="form-login__text">
@@ -18,7 +19,6 @@
         <fieldset class="fieldset">
           <label class="fieldset__label"
             >Seu E-mail
-            <!-- fieldset__input-wrapper--warn -->
             <div class="fieldset__input-wrapper">
               <input
                 class="fieldset__input"
@@ -63,7 +63,53 @@
           </div>
         </fieldset>
         <button class="fieldset__login-btn">Entrar</button>
-      </form>
+      </form> -->
+      <header class="header">
+        <div class="header__container">
+          <button class="burguer-btn">
+            <span class="burguer-btn__pipe"></span>
+            <span class="burguer-btn__pipe"></span>
+            <span class="burguer-btn__pipe"></span>
+          </button>
+          <div class="header__company-wrapper">
+            <figure class="header__company-avatar-wrapper">
+              <figcaption class="header__company-caption">ME</figcaption>
+            </figure>
+            <!-- <img src="#" alt="Logo da empresa" class="header__company-avatar" /> -->
+            <p class="header__company-name">Minha Empresa</p>
+          </div>
+          <ul class="header__actions-list">
+            <li class="header__actions-item">
+              <button class="header__action-btn header__action-btn--help">
+                <img
+                  class="header__icon header__icon--help"
+                  src="~@images/icon-help.svg"
+                  alt="Botão de ajuda"
+                />
+              </button>
+            </li>
+            <li class="header__actions-item">
+              <button class="header__action-btn header__action-btn--notif">
+                <img
+                  class="header__icon header__icon--notif"
+                  src="~@images/icon-bell.svg"
+                  alt="Botão de notificações"
+                />
+              </button>
+            </li>
+            <li class="header__actions-item">
+              <button class="header__user-btn">
+                <img
+                  class="header__user-avatar"
+                  src="~@images/pic-user.jpeg"
+                  alt="Botão do usuário"
+                />
+              </button>
+              <span class="header__username"> Gustavo Silva </span>
+            </li>
+          </ul>
+        </div>
+      </header>
     </div>
   </body>
 </html>
