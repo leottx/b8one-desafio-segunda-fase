@@ -1,0 +1,133 @@
+.report {
+  background: var(--white);
+  border-radius: 0.8rem;
+  padding: 1.6rem;
+  margin: 1.6rem 0;
+}
+
+.report__title {
+  font-size: 2rem;
+  color: var(--black);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  line-height: 2.4rem;
+}
+
+.report__icon {
+  font-size: 2.4rem;
+}
+
+.report__opt-list {
+  display: flex;
+  gap: 1.6rem;
+  height: 3.4rem;
+  font-size: 1.4rem;
+  color: var(--gray-200);
+  font-weight: 500;
+  line-height: 2rem;
+  margin: 1.6rem 0;
+  border-bottom: 1px solid var(--gray-100);
+}
+
+.report__opt {
+  cursor: pointer;
+}
+
+.report__opt--active {
+  color: var(--blue-300);
+  border-bottom: 2px solid var(--blue-300);
+}
+
+.report__wrapper {
+  height: 6.4rem;
+  position: relative;
+  margin-bottom: 2.4rem;
+}
+
+.report__amount-list {
+  display: flex;
+  height: 100%;
+  gap: 1.6rem;
+  overflow-x: scroll;
+  position: absolute;
+  right: -1.6rem;
+  left: 0;
+  scrollbar-width: none;
+  padding-right: 1.6rem;
+}
+
+.report__amount-list::-webkit-scrollbar {
+  display: none;
+}
+
+.report__amount {
+  border: 2px solid var(--blue-100);
+  border-radius: 1.2rem;
+  display: flex;
+  gap: 1.6rem;
+  align-items: center;
+  padding: 0 0.8rem;
+  width: calc(100% / 3);
+  min-width: 19.6rem;
+}
+
+.icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 4.8rem;
+  height: 4.8rem;
+  border-radius: 1.2rem;
+  background: var(--blue-100);
+}
+
+.report__amount-wrapper {
+  flex-shrink: 0;
+}
+
+.report__amount-type {
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+}
+
+.report__amount-value {
+  font-size: 1.4rem;
+  color: var(--gray-300);
+  font-weight: 600;
+  line-height: 2rem;
+}
+
+.report__chart {
+  height: 22.8rem;
+  background: var(--blue-100);
+  border-radius: 0.8rem;
+}
+
+@media screen and (min-width: 768px) {
+  .report {
+    padding: 2.4rem;
+  }
+
+  .report__wrapper {
+    margin-bottom: 4.8rem;
+  }
+
+  .report__title {
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+    font-weight: 600;
+  }
+
+  .report__opt-list {
+    font-size: 1.6rem;
+    margin: 1.6rem 0 2.4rem;
+  }
+
+  .report__amount-value {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
+}
