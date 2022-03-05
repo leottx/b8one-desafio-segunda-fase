@@ -1,0 +1,248 @@
+.insights {
+  background: var(--white);
+  padding: 1.6rem 1.6rem 2.4rem;
+  border-radius: 0.8rem;
+}
+
+.insights__title {
+  font-size: 2rem;
+  color: var(--black);
+  line-height: 2.4rem;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+}
+
+.insights__icon {
+  font-size: 2.4rem;
+}
+
+.insights__text {
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin: 2.4rem 0 1.6rem;
+}
+
+.insights__product-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.insights__product {
+  padding: 0.8rem;
+  border: 0.8rem;
+  display: grid;
+  grid-template-areas:
+    'image descr descr'
+    'index sku price';
+  grid-template-columns: auto 1fr 1fr;
+  column-gap: 1.6rem;
+  row-gap: 0.8rem;
+  font-size: 1.2rem;
+  color: var(--gray-400);
+  border-radius: 0.8rem;
+  background: var(--white);
+}
+
+.insights__label,
+.insights__divider,
+.insights__product-dept {
+  display: none;
+}
+
+.insights__label {
+  line-height: 1.6rem;
+  color: var(--gray-300);
+}
+
+.insights__divider {
+  height: 1px;
+  background: var(--gray-100);
+  grid-area: div;
+  margin: 1.2rem 0;
+}
+
+.insights__product:nth-child(even) {
+  background: var(--blue-100);
+}
+
+.insights__prod-label {
+  grid-area: prod-label;
+}
+
+.insights__sku-label {
+  grid-area: sku-label;
+}
+
+.insights__dept-label {
+  grid-area: dept-label;
+}
+
+.insights__price-label {
+  grid-area: price-label;
+}
+
+.insights__product-image {
+  width: 4rem;
+  height: 4rem;
+  object-fit: cover;
+  grid-area: image;
+}
+
+.insights__product-descr {
+  grid-area: descr;
+  line-height: 1.6rem;
+  align-self: center;
+  max-width: 54rem;
+}
+
+.insights__product-index {
+  grid-area: index;
+  font-weight: 600;
+  color: var(--blue-300);
+  line-height: 2rem;
+}
+
+.insights__product-sku {
+  grid-area: sku;
+  line-height: 2rem;
+}
+
+.insights__product-price {
+  grid-area: price;
+  justify-self: end;
+  line-height: 2rem;
+}
+
+.insights__options {
+  margin-top: 2.4rem;
+  gap: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.list-number {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  color: var(--gray-400);
+  gap: 0.8rem;
+}
+
+.list-number__wrapper {
+  position: relative;
+}
+
+.list-number__select {
+  border-radius: 0.8rem;
+  padding: 0.8rem 1.2rem 0.8rem 0.6rem;
+  border: 1px solid var(--gray-200);
+  background: var(--white);
+  color: inherit;
+  appearance: none;
+  width: 6.4rem;
+  cursor: pointer;
+}
+
+.list-number__select-arrow {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  height: 1rem;
+  width: 1rem;
+  top: 0;
+  right: 1.2rem;
+  height: 100%;
+  pointer-events: none;
+}
+
+.pagination,
+.pagination__page-list {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.pagination__btn {
+  background: var(--blue-100);
+}
+
+.pagination__btn,
+.pagination__page-index {
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination__page-index {
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.pagination__page-index--active {
+  background: var(--blue-300);
+  color: var(--white);
+}
+
+@media screen and (min-width: 768px) {
+  .insights {
+    padding: 2.4rem;
+  }
+
+  .insights__title {
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+    font-weight: 600;
+  }
+
+  .insights__text {
+    font-size: 2rem;
+    margin: 3.2rem 0 2.8rem;
+  }
+
+  .insights__product-list {
+    gap: 0.4rem;
+  }
+
+  .insights__product {
+    grid-template-columns:
+      4rem 4rem minmax(auto, 57.2rem) minmax(auto, 12.8rem) minmax(auto, 9.6rem)
+      minmax(9.6rem, 1fr);
+    row-gap: 0;
+    grid-template-areas: 'index image descr sku dept price';
+    padding: 0.8rem 0;
+    align-items: center;
+  }
+
+  .insights__product:first-of-type {
+    grid-template-areas:
+      'prod-label prod-label prod-label sku-label dept-label price-label'
+      'div div div div div div'
+      'index image descr sku dept price';
+  }
+
+  .insights__label,
+  .insights__divider,
+  .insights__product-dept {
+    display: block;
+  }
+
+  .insights__product-index {
+    margin-left: 1.6rem;
+    justify-self: center;
+  }
+
+  .insights__product-price {
+    justify-self: start;
+  }
+
+  .insights__options {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
