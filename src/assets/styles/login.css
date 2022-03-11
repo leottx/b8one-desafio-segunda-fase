@@ -2,7 +2,7 @@
   display: grid;
   place-items: center;
   min-height: 100vh;
-  background-color: var(--blue-200);
+  background-color: var(--blue-400);
 }
 
 .form-login {
@@ -26,10 +26,11 @@
   font-weight: 600;
   line-height: 3.2rem;
   margin-bottom: 0.8rem;
+  color: var(--black);
 }
 
 .form-login__text {
-  color: var(--gray-100);
+  color: var(--gray-500);
   font-size: 2rem;
   line-height: 2.4rem;
 }
@@ -49,12 +50,13 @@
 
 .fieldset__label {
   font-size: 1.4rem;
+  color: var(--gray-500);
 }
 
 .fieldset__input-wrapper {
   margin-top: 0.8rem;
   padding: 1.2rem 1.6rem;
-  border: 1px solid var(--gray-100);
+  border: 1px solid var(--gray-400);
   border-radius: 0.8rem;
   height: 4.8rem;
 }
@@ -72,12 +74,13 @@
   width: 100%;
   border: none;
   font-size: 1.6rem;
-  color: var(--gray-100);
+  color: var(--gray-500);
   outline: none;
 }
 
 .fieldset__input::placeholder {
   opacity: 1;
+  color: var(--gray-400);
 }
 
 .fieldset__warning {
@@ -86,6 +89,10 @@
   color: var(--red);
   font-weight: 500;
   font-size: 1.2rem;
+}
+
+.fieldset__warning.show {
+  display: block;
 }
 
 .fieldset__show-password-btn {
@@ -107,8 +114,9 @@
 }
 
 .fieldset__password-reset {
-  color: var(--blue-100);
+  color: var(--blue-300);
   font-weight: 500;
+  text-decoration: underline;
 }
 
 .fieldset__checkbox-label {
@@ -123,30 +131,26 @@
   border-radius: 0.4rem;
   appearance: none;
   -webkit-appearance: none;
-  border: 2px solid var(--blue-100);
+  border: 2px solid var(--blue-300);
   background: transparent;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   transition: all 0.15s ease-in;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
 }
 
 .fieldset__checkbox:checked {
-  background: var(--blue-100);
+  background: var(--blue-300);
 }
 
 .fieldset__checkbox::after {
   content: url('@images/icon-checkmark.svg');
-  display: none;
-}
-
-.fieldset__checkbox:checked:after {
-  display: block;
+  width: 1.2rem;
+  height: auto;
 }
 
 .fieldset__login-btn {
-  background: var(--blue-100);
+  background: var(--blue-300);
   height: 4.8rem;
   color: var(--white);
   font-weight: 600;
@@ -154,6 +158,18 @@
   border: none;
   border-radius: 0.8rem;
   text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12);
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.fieldset__spinner {
+  display: none;
+}
+
+.fieldset__spinner.show {
+  display: block;
 }
 
 /* TELAS GRANDES */
