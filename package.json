@@ -4,7 +4,8 @@
   "description": "Segunda desafio de front end promovido pela b8one academy",
   "main": "webpack.common.js",
   "scripts": {
-    "cz": "cz"
+    "cz": "cz",
+    "dev": "webpack serve --config ./webpack.dev.js"
   },
   "repository": {
     "type": "git",
@@ -34,14 +35,21 @@
     "imagemin-pngquant": "^9.0.2",
     "imagemin-svgo": "^10.0.1",
     "mini-css-extract-plugin": "^2.5.3",
+    "sass": "^1.49.9",
+    "sass-loader": "^12.6.0",
+    "style-loader": "^3.3.1",
     "terser-webpack-plugin": "^5.3.1",
     "webpack": "^5.69.1",
     "webpack-cli": "^4.9.2",
-    "webpack-dev-server": "^4.7.4"
+    "webpack-dev-server": "^4.7.4",
+    "webpack-merge": "^5.8.0"
   },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "dependencies": {
+    "chart.js": "^3.7.1"
   }
 }
