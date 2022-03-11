@@ -4,3 +4,9 @@
 .balance {
   margin: 1.6rem 0;
 }
+
+@media screen and (min-width: 1024px) {
+  .balance {
+    margin: 2.4rem 0 3.2rem;
+  }
+}
