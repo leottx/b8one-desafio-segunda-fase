@@ -10,61 +10,44 @@
 
 <body>
   <div id="root">
-    <!-- <form class="form-login">
-        <div class="form-login__wrapper">
-          <h1 class="form-login__title">Olá, tudo bem? 👋</h1>
-          <p class="form-login__text">
-            Vamos decolar para grandes dias de vendas.
-          </p>
-        </div>
-        <fieldset class="fieldset">
-          <label class="fieldset__label"
-            >Seu E-mail
-            <div class="fieldset__input-wrapper">
-              <input
-                class="fieldset__input"
-                type="email"
-                placeholder="exemplo@email.com"
-              />
-            </div>
-            <span class="fieldset__warning"
-              >Este e-mail não existe, você tem outro?</span
-            >
-          </label>
-
-          <label class="fieldset__label"
-            >Sua Senha
-            <div
-              class="fieldset__input-wrapper fieldset__input-wrapper--password"
-            >
-              <input
-                class="fieldset__input"
-                type="password"
-                placeholder="Digite sua senha"
-              />
-              <button class="fieldset__show-password-btn" title="Ver senha">
-                <img
-                  class="fieldset__show-password-icon"
-                  src="~@images/eye-off.svg"
-                  alt="Botão ver senha"
-                />
-              </button>
-            </div>
-            <span class="fieldset__warning"
-              >Senha incorreta, você esqueceu?</span
-            >
-          </label>
-
-          <div class="fieldset__wrapper">
-            <label for="" class="fieldset__checkbox-label">
-              <input class="fieldset__checkbox" type="checkbox" name="" id="" />
-              Manter conectado
-            </label>
-            <a class="fieldset__password-reset" href="">Esqueci minha senha</a>
+    <!-- <form class="form-login" id="form-login">
+      <div class="form-login__wrapper">
+        <h1 class="form-login__title">Olá, tudo bem? 👋</h1>
+        <p class="form-login__text">
+          Vamos decolar para grandes dias de vendas.
+        </p>
+      </div>
+      <fieldset class="fieldset">
+        <label class="fieldset__label">Seu E-mail
+          <div class="fieldset__input-wrapper">
+            <input class="fieldset__input" id="email-field" type=" email" placeholder="exemplo@email.com" />
           </div>
-        </fieldset>
-        <button class="fieldset__login-btn">Entrar</button>
-      </form> -->
+          <span class="fieldset__warning" id="email-warning"></span>
+        </label>
+
+        <label class="fieldset__label">Sua Senha
+          <div class="fieldset__input-wrapper fieldset__input-wrapper--password">
+            <input class="fieldset__input" id="password-field" type="password" placeholder="Digite sua senha" />
+            <button class="fieldset__show-password-btn" id="show-password-btn" title="Ver senha">
+              <img class="fieldset__show-password-icon" src="~@images/icon-eye-off.svg" alt="Botão ver senha" />
+            </button>
+          </div>
+          <span class="fieldset__warning" id="password-warning">Por favor, digite uma senha válida.</span>
+        </label>
+
+        <div class="fieldset__wrapper">
+          <label for="keep-conected" class="fieldset__checkbox-label">
+            <input class="fieldset__checkbox" type="checkbox" name="" id="checkbox" />
+            Manter conectado
+          </label>
+          <a class="fieldset__password-reset" href="">Esqueci minha senha</a>
+        </div>
+      </fieldset>
+      <button class="fieldset__login-btn" id="login-btn">
+        Entrar
+        <img src="~@images/anime-spinner.svg" alt="botão de login" class="fieldset__spinner" id="anime-spinner">
+      </button>
+    </form> -->
     <header class="header">
       <div class="header__container">
         <button class="burguer-btn">
@@ -75,8 +58,8 @@
         <div class="header__company-wrapper">
           <figure class="header__company-avatar-wrapper">
             <figcaption class="header__company-caption">ME</figcaption>
+            <img src="#" alt="Logo da empresa" class="header__company-avatar" />
           </figure>
-          <!-- <img src="#" alt="Logo da empresa" class="header__company-avatar" /> -->
           <p class="header__company-name">Minha Empresa</p>
         </div>
         <ul class="header__actions-list">
