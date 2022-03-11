@@ -1,23 +1,2 @@
-@import url('~@styles/banner.css');
-@import url('~@styles/balance.css');
-@import url('~@styles/insights.css');
-
-.main-content {
-  padding: 1.6rem;
-  width: 100%;
-}
-
-@media screen and (min-width: 1024px) {
-  .main-content {
-    width: min(100%, 100% - 244px);
-    margin-left: auto;
-    padding: 1.6rem 3.2rem 3.2rem;
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  .main-content {
-    /* 32px @1440px diminuindo para 0px @1472px */
-    padding-right: clamp(0rem, 92rem * 1.6 + -100vw, 2rem * 1.6);
-  }
-}
+@import url('~@styles/global.css');
+@import url('~@styles/login.css');

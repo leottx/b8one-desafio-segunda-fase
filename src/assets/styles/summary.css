@@ -23,7 +23,6 @@
   padding-right: 1.6rem;
   scrollbar-width: none;
   height: 100%;
-  color: var(--gray-500);
 }
 
 .summary__opt-list::-webkit-scrollbar {
@@ -40,31 +39,11 @@
   border-radius: 0.8rem;
   align-items: center;
   gap: 1rem;
-  outline-offset: -2px;
-  outline: 2px solid transparent;
-  transition: all 0.15s ease;
-}
-
-.summary__opt:hover {
-  outline: 2px solid var(--blue-300);
-  color: var(--blue-300);
-}
-
-.summary__opt svg path {
-  transition: stroke 0.15s ease;
-}
-
-.summary__opt:hover svg path {
-  stroke: var(--blue-300);
-}
-
-.summary__opt.summary__opt--active svg path {
-  stroke: var(--white) !important;
 }
 
 .summary__opt--active {
-  background: var(--blue-300) !important;
-  color: var(--white) !important;
+  background: var(--blue-300);
+  color: var(--white);
 }
 
 .summary__message {
@@ -81,10 +60,6 @@
 @media screen and (min-width: 768px) {
   .summary__wrapper {
     margin-bottom: 1.6rem;
-  }
-
-  .summary__title {
-    font-weight: 600;
   }
 
   .summary__message-highlight {

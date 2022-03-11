@@ -36,10 +36,6 @@
   line-height: 1.8rem;
 }
 
-.banner__strong {
-  font-weight: 700;
-}
-
 .banner__link {
   border-radius: 0.8rem;
   border: 2px solid var(--white);
@@ -48,12 +44,6 @@
   font-weight: 600;
   text-shadow: 1px 1px rgba(0, 0, 0, 0.12);
   display: none;
-  transition: all 0.15s ease;
-}
-
-.banner__link:hover {
-  background: var(--white);
-  color: var(--blue-300);
 }
 
 @media screen and (min-width: 768px) {
