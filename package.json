@@ -5,7 +5,10 @@
   "main": "webpack.common.js",
   "scripts": {
     "cz": "cz",
-    "dev": "webpack serve --config ./webpack.dev.js"
+    "dev": "webpack serve --config ./webpack.dev.js",
+    "prod": "webpack --config ./webpack.prod.js",
+    "predeploy": "npm run prod",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",

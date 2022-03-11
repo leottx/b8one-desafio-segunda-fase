@@ -11,7 +11,10 @@ const TerserPlugin = require('terser-webpack-plugin');
 const path = require('path');
 
 module.exports = {
-  entry: path.resolve(__dirname, 'src', 'index.js'),
+  entry: {
+    login: path.resolve(__dirname, 'src', 'bundle-login.js'),
+    dashboard: path.resolve(__dirname, 'src', 'bundle-dashboard.js'),
+  },
   optimization: {
     minimizer: [
       new TerserPlugin({
@@ -30,7 +33,14 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'public', 'template.html'),
+      filename: 'index.html',
+      template: path.resolve(__dirname, 'public', 'index.html'),
+      chunks: ['login'],
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'dashboard.html',
+      template: path.resolve(__dirname, 'public', 'dashboard.html'),
+      chunks: ['dashboard'],
     }),
   ],
   module: {
