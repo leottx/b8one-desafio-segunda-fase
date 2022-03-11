@@ -1,10 +1,21 @@
 /* VARIAVEIS */
 :root {
   --white: #ffffff;
-  --blue-100: #425dc7;
-  --blue-200: #142159;
-  --gray-100: #555555;
-  --gray-200: #333333;
+  --black: #000000;
+  --black-rgb: 0, 0, 0;
+  --blue-100: #f1f2f9;
+  --blue-200: #cdd2eb;
+  --blue-300: #425dc7;
+  --blue-300-h: 224;
+  --blue-300-s: 54%;
+  --blue-300-l: 52%;
+  --blue-400: #142159;
+  --gray-100: #eeeeee;
+  --gray-200: #d5d5d5;
+  --gray-300: #999999;
+  --gray-400: #555555;
+  --gray-500: #333333;
+  --green: #158f2e;
   --red: #eb0045;
 }
 
@@ -41,17 +52,36 @@
 
 html {
   font-size: 62.5%;
+  overflow-x: hidden;
+  scrollbar-color: var(--blue-300) var(--gray-100);
+  scrollbar-width: auto;
+}
+
+/* Chromium */
+html::-webkit-scrollbar {
+  background: transparent;
+  width: 6px;
+}
+
+html::-webkit-scrollbar-track {
+  background: var(--blue-200);
+}
+
+html::-webkit-scrollbar-thumb {
+  background: var(--blue-300);
+  border-radius: 200px;
 }
 
 body {
   -webkit-font-smoothing: antialiased;
-  background: var(--white);
-  color: var(--gray-200);
+  background: var(--blue-100);
+  color: var(--gray-400);
 }
 
 body,
 input,
 textarea,
+select,
 button {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
@@ -59,4 +89,28 @@ button {
 
 button {
   cursor: pointer;
+  border: none;
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Seletores globais */
+.container {
+  display: flex;
+  width: min(100%, 1440px);
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    /* 1440px @1440px diminuido para 1408px @1472px*/
+    width: clamp(88rem * 1.6, 180rem * 1.6 + -100vw, 90rem * 1.6);
+  }
 }
