@@ -8,7 +8,7 @@
 
 Desafio da segunda etapa eliminatória do curso de Desenvolvimento Front End promovido pela <a href="https://www.b8one.academy/">b8one Academy</a>
 
-### <a href="https://leottx.github.io/b8one-desafio-front-end/">Link de acesso 🔗</a>
+### <a href="https://leottx.github.io/b8one-desafio-segunda-fase/">Link de acesso 🔗</a>
 
 ## Instação
 
