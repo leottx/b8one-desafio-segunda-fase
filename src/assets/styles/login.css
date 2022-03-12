@@ -1,0 +1,192 @@
+#root {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background-color: var(--blue-400);
+}
+
+.form-login {
+  width: min(calc(100% - 1.6rem * 2), 432px);
+  background: var(--white);
+  border-radius: 0.8rem;
+  padding: 3.2rem 1.6rem 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  margin: 1.6rem 0;
+}
+
+.form-login__title,
+.form-login__text {
+  text-align: center;
+}
+
+.form-login__title {
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 3.2rem;
+  margin-bottom: 0.8rem;
+  color: var(--black);
+}
+
+.form-login__text {
+  color: var(--gray-500);
+  font-size: 2rem;
+  line-height: 2.4rem;
+}
+
+.fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.fieldset__label,
+.fieldset__input,
+.fieldset__login-btn {
+  display: block;
+}
+
+.fieldset__label {
+  font-size: 1.4rem;
+  color: var(--gray-500);
+}
+
+.fieldset__input-wrapper {
+  margin-top: 0.8rem;
+  padding: 1.2rem 1.6rem;
+  border: 1px solid var(--gray-400);
+  border-radius: 0.8rem;
+  height: 4.8rem;
+}
+
+.fieldset__input-wrapper--warn {
+  border: 2px solid var(--red);
+}
+
+.fieldset__input-wrapper--password {
+  display: flex;
+  align-items: color;
+}
+
+.fieldset__input {
+  width: 100%;
+  border: none;
+  font-size: 1.6rem;
+  color: var(--gray-500);
+  outline: none;
+}
+
+.fieldset__input::placeholder {
+  opacity: 1;
+  color: var(--gray-400);
+}
+
+.fieldset__warning {
+  display: none;
+  margin-top: 0.8rem;
+  color: var(--red);
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.fieldset__warning.show {
+  display: block;
+}
+
+.fieldset__show-password-btn {
+  border: none;
+  background: transparent;
+}
+
+.fieldset__show-password-icon {
+  width: 2.4rem;
+  height: 2.4rem;
+  object-fit: contain;
+}
+
+.fieldset__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.4rem;
+}
+
+.fieldset__password-reset {
+  color: var(--blue-300);
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.fieldset__checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.fieldset__checkbox {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.4rem;
+  appearance: none;
+  -webkit-appearance: none;
+  border: 2px solid var(--blue-300);
+  background: transparent;
+  transition: all 0.15s ease-in;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+
+.fieldset__checkbox:checked {
+  background: var(--blue-300);
+}
+
+.fieldset__checkbox::after {
+  content: url('@images/icon-checkmark.svg');
+  width: 1.2rem;
+  height: auto;
+}
+
+.fieldset__login-btn {
+  background: var(--blue-300);
+  height: 4.8rem;
+  color: var(--white);
+  font-weight: 600;
+  font-size: 1.6rem;
+  border: none;
+  border-radius: 0.8rem;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12);
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.fieldset__spinner {
+  display: none;
+}
+
+.fieldset__spinner.show {
+  display: block;
+}
+
+/* TELAS GRANDES */
+@media screen and (min-width: 640px) {
+  .form-login {
+    padding: 4.8rem;
+    gap: 3.2rem;
+    border-radius: 1.6rem;
+  }
+
+  .form-login__title,
+  .form-login__text {
+    text-align: left;
+  }
+
+  .form-login__title {
+    font-size: 3.2rem;
+    line-height: 4rem;
+  }
+}

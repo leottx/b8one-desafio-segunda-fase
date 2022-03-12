@@ -1,0 +1,361 @@
+.report {
+  background: var(--white);
+  border-radius: 0.8rem;
+  padding: 1.6rem;
+  margin: 1.6rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.report .report__title {
+  font-size: 2rem;
+  color: var(--black);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  line-height: 2.4rem;
+}
+
+.report__icon {
+  font-size: 2.4rem;
+}
+
+.report__opt-list {
+  display: flex;
+  gap: 1.6rem;
+  height: 3.4rem;
+  color: var(--gray-400);
+  line-height: 2rem;
+  margin-top: 1.6rem;
+  border-bottom: 1px solid var(--gray-100);
+}
+
+.report__opt-btn {
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all 0.15s ease;
+  background: var(--white);
+  display: flex;
+  font-weight: 500;
+  font-size: 1.4rem;
+  height: 100%;
+  color: inherit;
+}
+
+.report__opt-btn:hover {
+  border-color: var(--black);
+}
+
+.report__opt-btn.active {
+  color: var(--blue-300) !important;
+  border-bottom: 2px solid var(--blue-300) !important;
+}
+
+.report__left-wrapper {
+  min-width: 25.6rem;
+  flex-grow: 1;
+}
+
+.report__amount-wrapper {
+  height: 6.4rem;
+  position: relative;
+  margin: 1.6rem 0 2.4rem;
+  display: none;
+}
+
+.report__amount-wrapper.show {
+  display: block;
+}
+
+.report__amount-list {
+  display: flex;
+  height: 100%;
+  gap: 1.6rem;
+  overflow-x: scroll;
+  position: absolute;
+  right: -1.6rem;
+  left: 0;
+  scrollbar-width: none;
+  padding-right: 1.6rem;
+}
+
+.report__amount-list::-webkit-scrollbar {
+  display: none;
+}
+
+.report__amount {
+  border: 2px solid var(--blue-100);
+  border-radius: 1.2rem;
+  display: flex;
+  gap: 1.6rem;
+  align-items: center;
+  padding: 0 0.8rem;
+  width: calc(100% / 3);
+  min-width: 19.6rem;
+  cursor: pointer;
+}
+
+.icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 4.8rem;
+  height: 4.8rem;
+  border-radius: 1.2rem;
+  background: var(--blue-100);
+}
+
+.report__amount-inner-wrapper {
+  flex-shrink: 0;
+}
+
+.report__amount-type {
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+}
+
+.report__amount-value {
+  font-size: 1.4rem;
+  color: var(--gray-500);
+  font-weight: 600;
+  line-height: 2rem;
+}
+
+.report__select {
+  display: none;
+  margin-top: 1.6rem;
+}
+
+.report__select.show {
+  display: block;
+}
+
+.report__select-btn {
+  font-size: 1.4rem;
+  line-height: 2rem;
+  padding: 0 1.6rem;
+  height: 4rem;
+  width: min(100%, 28rem);
+  border: 1px solid var(--gray-300);
+  border-radius: 0.8rem;
+  display: flex;
+  align-items: center;
+  background: var(--white);
+  color: var(--gray-300);
+}
+
+.report__selected {
+  color: var(--gray-500);
+}
+
+.report__select-btn svg {
+  margin-left: auto;
+}
+
+.report__select-list {
+  display: none;
+}
+
+.report__chart {
+  height: 29.6rem;
+  background: var(--white);
+  border-radius: 0.8rem;
+  margin-top: 2.4rem;
+}
+
+.report__ranking {
+  background: var(--white);
+  min-height: 39.8rem;
+  grid-template-rows: auto auto 1fr;
+  border-radius: 0.8rem;
+  border: 2px solid var(--blue-100);
+  padding: 1.6rem;
+  display: none;
+}
+
+.report__ranking.show {
+  display: grid;
+}
+
+.report__ranking-title {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  color: var(--black);
+  font-weight: 500;
+}
+
+.report__seler-list {
+  height: 24.4rem;
+  overflow-y: auto;
+  /* Firefox */
+  scrollbar-color: var(--blue-300) var(--white);
+  margin: 1.6rem 0 2.4rem;
+}
+
+/* Chromium */
+.report__seler-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.report__seler-list::-webkit-scrollbar-track {
+  background: var(--blue-200);
+  border-radius: 200px;
+}
+
+.report__seler-list::-webkit-scrollbar-thumb {
+  background: var(--blue-300);
+  border-radius: 200px;
+}
+
+.report__seler {
+  display: flex;
+  align-items: center;
+  gap: clamp(
+    0.625rem * 1.6,
+    -2.3750000000000004rem * 1.6 + 15.000000000000002vw,
+    1rem * 1.6
+  );
+  width: calc(100% - 1.6rem);
+  min-height: 5rem;
+  padding: 0.5rem 0;
+}
+
+.report__seler-index {
+  width: min(100%, 2.4rem);
+  display: flex;
+  justify-content: flex-start;
+  font-size: 1.6rem;
+  color: var(--black);
+  font-weight: 500;
+}
+
+.report__seler-pic-wrapper {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background: var(--blue-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--blue-300);
+  flex-shrink: 0;
+}
+
+.report__seler-pic {
+  display: none;
+}
+
+.report__seler-wrapper {
+  flex-grow: 1;
+}
+
+.report__seler-name {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--black);
+  line-height: 2rem;
+}
+
+.report__order-wrapper {
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  display: flex;
+}
+
+.report__order-stats {
+  color: var(--green);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.report__order-stats.negative {
+  color: var(--red);
+}
+
+.report__ranking-footer {
+  border-top: 2px solid var(--blue-100);
+  display: flex;
+  align-items: flex-end;
+  padding-top: 1.4rem;
+}
+
+.report__ranking-btn {
+  margin-left: auto;
+  padding: 0 1.6rem;
+  height: 4rem;
+  border-radius: 0.8rem;
+  color: var(--blue-300);
+  border: 2px solid var(--blue-300);
+  font-weight: 600;
+  background: var(--white);
+  font-size: 1.4rem;
+  transition: all 0.15s ease;
+}
+
+.report__ranking-btn:hover {
+  background: var(--blue-300);
+  color: var(--white);
+}
+
+@media screen and (min-width: 768px) {
+  .report {
+    padding: 2.4rem;
+    flex-direction: row;
+    gap: 6.4rem;
+  }
+
+  .report__left-wrapper {
+    min-width: 29.6rem;
+  }
+
+  .report__amount-wrapper {
+    margin: 2.4rem 0 4.8rem;
+  }
+
+  .report__title {
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+    font-weight: 600;
+  }
+
+  .report__opt-list {
+    font-size: 1.6rem;
+  }
+
+  .report__amount-value {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
+
+  .report__ranking {
+    height: 43rem;
+    padding: 2.4rem;
+    width: min(100%, 34rem);
+  }
+
+  .report__seler-list {
+    margin: 2.4rem 0;
+  }
+
+  .report__select.show {
+    display: block;
+  }
+
+  .report__chart {
+    margin-top: 4.8rem;
+  }
+
+  .report__chart--select {
+    margin-top: 2.4rem;
+  }
+}

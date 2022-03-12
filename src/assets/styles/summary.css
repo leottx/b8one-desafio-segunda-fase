@@ -1,0 +1,99 @@
+.summary__title {
+  font-size: 2.4rem;
+  font-weight: 500;
+  color: var(--black);
+  line-height: 3.2rem;
+  margin-bottom: 1.6rem;
+}
+
+.summary__wrapper {
+  height: 3.2rem;
+  position: relative;
+  margin-bottom: 0.8rem;
+}
+
+.summary__opt-list {
+  font-size: 1.2rem;
+  display: flex;
+  gap: 0.8rem;
+  position: absolute;
+  overflow-x: scroll;
+  left: 0;
+  right: -1.6rem;
+  padding-right: 1.6rem;
+  scrollbar-width: none;
+  height: 100%;
+  color: var(--gray-500);
+}
+
+.summary__opt-list::-webkit-scrollbar {
+  display: none;
+}
+
+.summary__opt {
+  flex-shrink: 0;
+  display: inline-flex;
+  overflow: hidden;
+}
+
+.summary__opt-btn {
+  border-radius: 0.8rem;
+  outline-offset: -2px;
+  outline: 2px solid transparent;
+  transition: all 0.15s ease;
+  gap: 1rem;
+  background: var(--white);
+  align-items: center;
+  cursor: pointer;
+  padding: 0 1.6rem;
+  font-weight: 600;
+  display: inline-flex;
+  color: var(--gray-500);
+}
+
+.summary__opt-btn:hover {
+  outline: 2px solid var(--blue-300);
+  color: var(--blue-300);
+}
+
+.summary__opt-btn svg path {
+  transition: stroke 0.15s ease;
+}
+
+.summary__opt-btn:hover svg path {
+  stroke: var(--blue-300);
+}
+
+.summary__opt-btn.active svg path {
+  stroke: var(--white) !important;
+}
+
+.summary__opt-btn.active {
+  background: var(--blue-300) !important;
+  color: var(--white) !important;
+}
+
+.summary__message {
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.6rem;
+}
+
+.summary__message-highlight {
+  color: var(--blue-300);
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .summary__wrapper {
+    margin-bottom: 1.6rem;
+  }
+
+  .summary__title {
+    font-weight: 600;
+  }
+
+  .summary__message-highlight {
+    display: inline;
+  }
+}

@@ -1,0 +1,383 @@
+.header__action-dropdown {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.header__action-dropdown.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Menu dropdow do usuario */
+.user-dropdown {
+  position: absolute;
+  top: calc(50% + 2.4rem + 0.8rem);
+  right: 0;
+  padding: 1.6rem;
+  background: var(--white);
+  border-radius: 0.8rem;
+  width: 18rem;
+  box-shadow: 0 8px 16px rgba(var(--black-rgb), 0.08);
+  z-index: 99999;
+}
+
+.user-dropdown.show {
+  display: block;
+}
+
+.user-dropdown::before {
+  content: '';
+  position: absolute;
+  background: var(--white);
+  width: 1.2rem;
+  height: 1.2rem;
+  transform: rotate(45deg);
+  top: -0.6rem;
+  right: 0.8rem;
+  border-radius: 2px;
+}
+
+.user-dropdown__opt {
+  font-weight: 500;
+  display: flex;
+  align-self: flex-start;
+  height: 3.4rem;
+  width: 100%;
+  color: var(--gray-500);
+  padding: 0;
+}
+
+.user-dropdown__opt:first-child {
+  border-bottom: 1px solid var(--blue-100);
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  height: 3.6rem;
+}
+
+.user-dropdown__highlight {
+  color: var(--blue-300);
+}
+
+.user-dropdown__btn {
+  background: var(--white);
+  font-size: 1.2rem;
+  font-weight: inherit;
+  align-items: center;
+  border-bottom: none;
+  color: inherit;
+}
+
+.user-dropdown__btn:hover {
+  color: var(--blue-300);
+}
+
+/* Menu dropdown de ajuda */
+.help-dropdown {
+  position: absolute;
+  top: calc(50% + 2.4rem + 0.8rem);
+  left: 50%;
+  padding: 2.4rem 1.6rem 1.6rem;
+  background: var(--white);
+  border-radius: 0.8rem;
+  width: 18rem;
+  box-shadow: 0 8px 16px rgba(var(--black-rgb), 0.08);
+  z-index: 99999;
+  transform: translateX(-50%);
+}
+
+.help-dropdown.show {
+  display: block;
+}
+
+.help-dropdown::before {
+  content: '';
+  position: absolute;
+  background: var(--white);
+  width: 1.2rem;
+  height: 1.2rem;
+  transform: translateX(-50%) rotate(45deg);
+  left: 50%;
+  top: -0.6rem;
+  border-radius: 2px;
+}
+
+.help-dropdown__opt {
+  padding: 0.8rem 0;
+  display: flex;
+  align-items: center;
+}
+
+.help-dropdown__opt:last-child {
+  align-items: flex-end;
+  border-top: 1px solid var(--blue-100);
+  margin-top: 1rem;
+  line-height: 2.2rem;
+  padding: 2rem 0 1.2rem;
+}
+
+.help-dropdown__btn {
+  background: var(--white);
+  font-size: 1.2rem;
+  font-weight: inherit;
+  align-items: center;
+  border-bottom: none;
+  color: inherit;
+  font-weight: 500;
+}
+
+.help-dropdown__btn.highlight {
+  color: var(--blue-300);
+  font-weight: 600;
+}
+
+/* Menu dropdown de notificacoes */
+.notif-dropdown {
+  position: absolute;
+  top: calc(50% + 2.4rem + 0.8rem);
+  right: -4.8rem;
+  padding: 1.6rem;
+  background: var(--white);
+  border-radius: 0.8rem;
+  width: 24.4rem;
+  box-shadow: 0 8px 16px rgba(var(--black-rgb), 0.08);
+  z-index: 99999;
+}
+
+.notif-dropdown.show {
+  display: block;
+}
+
+.notif-dropdown::before {
+  content: '';
+  position: absolute;
+  background: var(--white);
+  width: 1.2rem;
+  height: 1.2rem;
+  transform: rotate(45deg);
+  top: -0.6rem;
+  right: 5.2rem;
+  border-radius: 2px;
+}
+
+.notif-dropdown__welcome,
+.notif-dropdown__latest {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: baseline;
+}
+
+.notif-dropdown__title {
+  color: var(--black);
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 0.8rem;
+}
+
+.notif-dropdown__icon {
+  margin-right: 0.8rem;
+  width: 1.4rem;
+  display: inline-block;
+}
+
+.notif-dropdown__welcome-text {
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  padding-left: 2.2rem;
+}
+
+.notif-dropdown__right-wrapper {
+  flex-shrink: 0;
+}
+
+.quest-wrapper {
+  margin: 1.6rem 0 4rem;
+  font-size: 1.2rem;
+  padding-left: 2.2rem;
+}
+
+.quest-row {
+  font-weight: 500;
+  position: relative;
+}
+
+.quest-row:first-child {
+  height: 5.2rem;
+  display: flex;
+  align-items: flex-start;
+}
+
+.quest-row__inner-wrapper {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+}
+
+.quest-box {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.4rem;
+  border: 2px solid var(--black);
+  flex-shrink: 0;
+  position: relative;
+}
+
+.quest-box--active {
+  background: var(--blue-300);
+  border: 2px solid var(--blue-300);
+  display: flex;
+  justify-content: center;
+}
+
+.quest-box--active::before {
+  content: url('~@images/icon-checkmark.svg');
+  width: 1.2rem;
+  height: auto;
+}
+
+.quest-row:first-child .quest-box::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 32px;
+  top: 1.8rem;
+  background: var(--black);
+}
+
+.quest-title {
+  color: var(--black);
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+
+.quest-link {
+  position: absolute;
+  left: 3.2rem;
+  color: var(--blue-300);
+  line-height: 1.6rem;
+}
+
+.notif-dropdown__time {
+  font-size: 1.2rem;
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.notif-dropdown__circle {
+  width: 1.2rem;
+  height: 1.2rem;
+  background: var(--red);
+  border-radius: 50%;
+}
+
+.notif-dropdown__latest {
+  border-bottom: 1px solid var(--blue-100);
+  border-top: 1px solid var(--blue-100);
+  padding: 1.6rem 0;
+}
+
+.notif-dropdown__latest-msg {
+  font-size: 1.4rem;
+}
+
+.notif-dropdown__latest-link {
+  padding-left: 2.2rem;
+  font-size: 1.2rem;
+  color: var(--blue-300);
+  font-weight: 500;
+  margin-top: 1.6rem;
+  display: block;
+}
+
+.notif-dropdown__read {
+  padding: 2.4rem 0 0.8em;
+}
+
+.notif-dropdown__read-btn {
+  color: var(--blue-300);
+  font-size: 1.4rem;
+  margin: 0 auto;
+  display: block;
+  line-height: 2rem;
+  background: var(--white);
+  font-weight: 600;
+}
+
+@media screen and (min-width: 768px) {
+  .user-dropdown,
+  .help-dropdown,
+  .notif-dropdown {
+    top: calc(50% + 3.2rem + 0.8rem);
+  }
+
+  .user-dropdown::before {
+    transform: translateX(-50%) rotate(45deg);
+    left: 50%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  /* Menu dropdow do usuario */
+  .user-dropdown {
+    padding: 2.4rem;
+    width: 22.4rem;
+  }
+
+  .user-dropdown__opt:first-child {
+    font-size: 1.6rem;
+    height: 3.8rem;
+    margin-bottom: 1.6rem;
+  }
+
+  .user-dropdown__btn {
+    font-size: 1.4rem;
+  }
+
+  .user-dropdown::before {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+
+  /* Menu dropdown de ajuda */
+  .help-dropdown {
+    padding: 2.4rem 2.4rem 1.6rem;
+    width: 20rem;
+  }
+
+  .help-dropdown__opt:first-child {
+    margin-bottom: 0.8rem;
+  }
+
+  .help-dropdown__btn {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+  }
+
+  .help-dropdown__opt:last-child {
+    padding: 2rem 0 1.2rem;
+    margin-top: 1.6rem;
+  }
+
+  .help-dropdown__opt:last-child .help-dropdown__btn {
+    line-height: 2.4rem;
+  }
+
+  /* Menu dropdown de notificacoes */
+  .notif-dropdown {
+    padding: 2.4rem;
+    width: 34rem;
+  }
+
+  .notif-dropdown__read {
+    padding: 2.4rem 0 0;
+  }
+
+  .notif-dropdown__read-btn {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
+}
