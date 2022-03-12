@@ -1,11 +1,5 @@
 import { fetchData } from '@utils/general';
-
-const formatCurrency = (value) => {
-  return (value / 100).toLocaleString('pt-br', {
-    style: 'currency',
-    currency: 'BRL',
-  });
-};
+import { formatCurrency } from '@utils/general';
 
 const populateProductList = async () => {
   let { products } = await fetchData('products/more-sold');

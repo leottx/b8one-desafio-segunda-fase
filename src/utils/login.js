@@ -63,8 +63,7 @@ const login = (email, password) => {
             })
           );
         }
-        window.location.href = 'https://google.com';
-        return;
+        window.location.href = 'http://localhost:9000/dashboard.html';
       }
 
       const { message } = data;
