@@ -1,26 +1,30 @@
-const getFirstTwoLetters = (string) => {
-  const firstTwoLetters = string
-    .split(' ')
-    .map((word) => word[0])
-    .join('')
-    .substring(0, 2);
+import { getFirstTwoLetters, fetchData } from '@utils/general';
 
-  return firstTwoLetters;
-};
+const burguerBtnElement = document.getElementById('burguer');
+const asideElement = document.getElementById('aside');
+const usernameBtnElement = document.getElementById('username-btn');
+const dropdowElements = document.querySelectorAll('.header__action-dropdown');
+let actionBtnElements = document.querySelectorAll('.header__action-btn');
 
-const fetchHeaderData = async () => {
-  const BASE__URL = 'https://test-final.b8one.academy/';
+actionBtnElements = [...actionBtnElements, usernameBtnElement];
 
-  const response = await fetch(`${BASE__URL}user`);
-  const data = await response.json();
+actionBtnElements.forEach((btn, index) => {
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
 
-  return data;
-};
+    dropdowElements[index].classList.toggle('show');
+  });
+});
+
+// toggle do menu hamburguer
+burguerBtnElement.addEventListener('click', (e) => {
+  e.preventDefault();
+  asideElement.classList.toggle('show');
+});
 
 const populateHeader = async () => {
-  const { username, organization, photo } = await fetchHeaderData();
+  const { username, organization, photo } = await fetchData('user');
   const companyWrapperElement = document.getElementById('company-wrapper');
-  const usernameBtnElement = document.getElementById('username-btn');
 
   companyWrapperElement.innerHTML = `
   <figure class="header__company-avatar-wrapper">
@@ -37,4 +41,4 @@ const populateHeader = async () => {
   `;
 };
 
-window.onload = () => populateHeader();
+populateHeader();

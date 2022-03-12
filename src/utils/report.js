@@ -1,3 +1,4 @@
+import '@utils/summary';
 import '@utils/ranking';
 import '@utils/sales';
 
@@ -13,12 +14,12 @@ const rankingWrapperElement = document.getElementById('ranking-wrapper');
 const viewBtnElements = document.querySelectorAll('.report__opt-btn');
 
 const renderReportView = (viewId) => {
-  clearClasses([
-    statsWrapperElement,
-    selectWrapperElement,
-    rankingWrapperElement,
-    ...viewBtnElements,
-  ]);
+  clearClasses(
+    [statsWrapperElement, selectWrapperElement, rankingWrapperElement],
+    'show'
+  );
+
+  clearClasses(viewBtnElements, 'active');
 
   switch (viewId) {
     case reportViews[0]:

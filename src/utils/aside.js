@@ -1,3 +1,5 @@
+import { fetchData } from '@utils/general';
+
 const iconsList = [
   `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
   <path d="M10.5 3.75H3.75V10.5H10.5V3.75Z" fill="#425DC7" stroke="#425DC7" stroke-width="1.5"
@@ -77,17 +79,8 @@ d="M19.4 14.9993C19.2669 15.3009 19.2272 15.6355 19.286 15.9599C19.3448 16.2843 
 </svg>`,
 ];
 
-const fetchAsideData = async () => {
-  const BASE__URL = 'https://test-final.b8one.academy/';
-
-  const response = await fetch(`${BASE__URL}menu`);
-  const data = await response.json();
-
-  return data;
-};
-
 const populateAside = async () => {
-  let { menuTree } = await fetchAsideData();
+  let { menuTree } = await fetchData('menu');
 
   const menuListElement = document.getElementById('menu-list');
 
